@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TODO/static/css/main.240d1e2c.css",
-    "main.js": "/TODO/static/js/main.74e6e6ba.js",
+    "main.js": "/TODO/static/js/main.9e26c628.js",
     "static/js/198.7739b359.chunk.js": "/TODO/static/js/198.7739b359.chunk.js",
     "static/media/bangers-latin-400-normal.woff2": "/TODO/static/media/bangers-latin-400-normal.80f34b699569032357ff.woff2",
     "static/media/bangers-latin-400-normal.woff": "/TODO/static/media/bangers-latin-400-normal.eabb56ecf482ad3ed2ad.woff",
@@ -13,11 +13,11 @@
     "static/media/bangers-vietnamese-400-normal.woff": "/TODO/static/media/bangers-vietnamese-400-normal.10e0b1b4fae943c07af1.woff",
     "index.html": "/TODO/index.html",
     "main.240d1e2c.css.map": "/TODO/static/css/main.240d1e2c.css.map",
-    "main.74e6e6ba.js.map": "/TODO/static/js/main.74e6e6ba.js.map",
+    "main.9e26c628.js.map": "/TODO/static/js/main.9e26c628.js.map",
     "198.7739b359.chunk.js.map": "/TODO/static/js/198.7739b359.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.240d1e2c.css",
-    "static/js/main.74e6e6ba.js"
+    "static/js/main.9e26c628.js"
   ]
 }
