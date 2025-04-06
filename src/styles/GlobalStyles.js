@@ -4,17 +4,18 @@ import '@fontsource/comic-neue';
 
 export const GlobalStyles = createGlobalStyle`
   :root {
-    --primary-color: #FF6B6B;
-    --secondary-color: #4ECDC4;
-    --accent-color: #FFE66D;
-    --background-color: #F7F7F7;
-    --text-color: #2D3436;
-    --border-color: #2D3436;
-    --header-bg: #2D3436;
+    --primary-color: #FF4B4B;
+    --secondary-color: #4B9EFF;
+    --accent-color: #FFD700;
+    --background-color: #F8F9FA;
+    --text-color: #2C3E50;
+    --border-color: #34495E;
+    --header-bg: #2C3E50;
     --header-text: #FFFFFF;
     --panel-bg: #FFFFFF;
-    --error-color: #FF7675;
-    --success-color: #00B894;
+    --error-color: #E74C3C;
+    --success-color: #2ECC71;
+    --shadow-color: rgba(0, 0, 0, 0.1);
   }
 
   * {
@@ -35,7 +36,7 @@ export const GlobalStyles = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
   }
 
@@ -45,9 +46,16 @@ export const GlobalStyles = createGlobalStyle`
     margin: 2rem auto;
     position: relative;
     background-color: var(--panel-bg);
-    box-shadow: 5px 5px 0 var(--border-color);
+    box-shadow: 8px 8px 0 var(--border-color);
     max-width: 90%;
     width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 12px 12px 0 var(--border-color);
+    }
   }
 
   .speech-bubble {
@@ -58,6 +66,7 @@ export const GlobalStyles = createGlobalStyle`
     border-radius: 1rem;
     margin: 1rem 0;
     max-width: 80%;
+    box-shadow: 4px 4px 0 var(--border-color);
   }
 
   .speech-bubble:after {
@@ -88,17 +97,23 @@ export const GlobalStyles = createGlobalStyle`
     background-color: var(--primary-color);
     color: white;
     border: 2px solid var(--border-color);
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
     cursor: pointer;
     font-size: 1.1rem;
     letter-spacing: 1px;
-    box-shadow: 3px 3px 0 var(--border-color);
+    box-shadow: 4px 4px 0 var(--border-color);
     transition: all 0.2s ease;
+    border-radius: 4px;
 
     &:hover {
       transform: translate(2px, 2px);
-      box-shadow: 1px 1px 0 var(--border-color);
+      box-shadow: 2px 2px 0 var(--border-color);
       background-color: var(--secondary-color);
+    }
+
+    &:active {
+      transform: translate(4px, 4px);
+      box-shadow: 0 0 0 var(--border-color);
     }
   }
 
@@ -108,12 +123,13 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0.8rem;
     margin: 0.5rem 0;
     width: 100%;
-    box-shadow: 2px 2px 0 var(--border-color);
+    box-shadow: 4px 4px 0 var(--border-color);
     border-radius: 4px;
+    transition: all 0.3s ease;
 
     &:focus {
       outline: none;
-      box-shadow: 4px 4px 0 var(--border-color);
+      box-shadow: 6px 6px 0 var(--border-color);
       border-color: var(--secondary-color);
     }
   }
@@ -127,5 +143,15 @@ export const GlobalStyles = createGlobalStyle`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  @keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  .pop-animation {
+    animation: pop 0.3s ease;
   }
 `; 

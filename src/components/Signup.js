@@ -19,8 +19,9 @@ const Title = styled.h1`
   text-align: center;
   margin-bottom: 2rem;
   color: var(--primary-color);
-  font-size: 2.5rem;
-  text-shadow: 2px 2px 0 var(--border-color);
+  font-size: 3rem;
+  text-shadow: 3px 3px 0 var(--border-color);
+  letter-spacing: 3px;
 `;
 
 const Form = styled.form`
@@ -39,6 +40,7 @@ const FormGroup = styled.div`
     font-family: 'Bangers', cursive;
     font-size: 1.2rem;
     color: var(--text-color);
+    letter-spacing: 1px;
   }
 `;
 
@@ -51,18 +53,21 @@ const ErrorMessage = styled.div`
   border: 2px solid var(--error-color);
   width: 100%;
   text-align: center;
+  font-family: 'Comic Neue', cursive;
 `;
 
 const LoginLink = styled.div`
   text-align: center;
   margin-top: 2rem;
   font-size: 1.1rem;
+  font-family: 'Comic Neue', cursive;
   
   a {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
     font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
     
     &:hover {
       text-decoration: underline;
@@ -76,6 +81,22 @@ const SubmitButton = styled.button`
   padding: 1rem;
   font-size: 1.2rem;
   margin-top: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: 2px solid var(--border-color);
+  box-shadow: 4px 4px 0 var(--border-color);
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: var(--secondary-color);
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--border-color);
+  }
+
+  &:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 var(--border-color);
+  }
 `;
 
 function Signup() {
@@ -106,7 +127,7 @@ function Signup() {
   return (
     <SignupContainer>
       <div className="comic-panel">
-        <Title>Join the Comic Todo Adventure</Title>
+        <Title>Sign Up</Title>
         {error && <ErrorMessage>{error}</ErrorMessage>}
         <Form onSubmit={handleSubmit}>
           <FormGroup>

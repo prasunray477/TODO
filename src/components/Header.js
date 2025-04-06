@@ -24,16 +24,32 @@ const Nav = styled.nav`
 
 const Logo = styled(Link)`
   font-family: 'Bangers', cursive;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: var(--header-text);
   text-decoration: none;
-  text-shadow: 2px 2px 0 var(--border-color);
-  letter-spacing: 2px;
+  text-shadow: 3px 3px 0 var(--border-color);
+  letter-spacing: 3px;
   transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &:before {
+    content: '⚡';
+    font-size: 2rem;
+    animation: pop 0.5s infinite;
+  }
 
   &:hover {
     color: var(--accent-color);
     transform: scale(1.05);
+  }
+
+  @keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
   }
 `;
 
@@ -77,10 +93,12 @@ const SignOutButton = styled.button`
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
+  border-radius: 4px;
 
   &:hover {
     background-color: var(--header-text);
     color: var(--error-color);
+    transform: translate(2px, 2px);
   }
 `;
 
@@ -96,7 +114,7 @@ function Header() {
   return (
     <HeaderContainer>
       <Nav>
-        <Logo to="/">Comic Todo</Logo>
+        <Logo to="/">TODO</Logo>
         <NavLinks>
           {user ? (
             <UserInfo>
